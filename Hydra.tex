@@ -4,6 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{gb4e}
 
 \begin{document}
 
@@ -16,7 +17,7 @@
     \vskip0.5cm
     \Large Offizielles Regelwerk
     \vfill
-    \includegraphics[width=\textwidth]{Hydra.png}
+    \includegraphics[width=\textwidth]{Resources/Hydra.png}
     \vfill
     \large entwickelt von
     \vskip0.2cm
@@ -24,6 +25,18 @@
     \vfill
 \end{titlepage}
 
-% Rules
+% gb4e setup
+
+\renewcommand{\thexnumi}{\thesubsection.\arabic{xnumi}}
+
+\counterwithin{exx}{section}
+\counterwithin{exx}{subsection}
+
+\newcommand{\rules}[1]{\begin{xlistn}[2.3.4.]#1\end{xlistn}}
+\newcommand{\regel}{\ex} % \rule is already a command
+
+% Sections
+
+\input{Sections/1-Allgemeines}
 
 \end{document}
